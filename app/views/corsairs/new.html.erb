@@ -1,0 +1,21 @@
+
+<br /><br />
+<h1>Enregistrement d'un nouveau Moussaillon</h1>
+<br /><br />
+
+<p>
+ <%= form_tag (corsairs_path) do %>
+ <h3>Name</h><br />
+  <!-- <%= label_tag 'first_name', 'Nom' %> -->
+  <%= text_field_tag 'first_name' %>
+</p>
+
+<p>
+  <h>Age</h><br />
+  <!-- <%= label_tag 'age', 'Age' %> -->
+  <%= text_field_tag 'age' %>
+</p>
+
+
+   <%= submit_tag "Sign Up"%>
+ <% end %>
