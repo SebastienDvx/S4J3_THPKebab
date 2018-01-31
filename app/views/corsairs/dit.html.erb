@@ -1,0 +1,22 @@
+<br /><br />
+<h1>Modification de vos informations</h1>
+<br /><br />
+
+<p>
+ <%= form_tag corsair_path(Corsair.find(params[:id])), method: :put do %>  
+ <h3>Name</h><br />
+  <!-- <%= label_tag 'first_name', 'Nom' %> -->
+  <%= text_field_tag 'first_name' %>
+</p>
+
+<p>
+  <h>Age</h><br />
+  <!-- <%= label_tag 'age', 'Age' %> -->
+  <%= text_field_tag 'age' %>
+</p>
+
+
+   <%= submit_tag "Mettre à jour"%>
+ <% end %>
+
+ <%= link_to 'Back', corsairs_path %>

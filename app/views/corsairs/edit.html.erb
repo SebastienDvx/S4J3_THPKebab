@@ -1,0 +1,35 @@
+<br /><br />
+
+<h1>Edit Moussaillon</h1>
+
+<%= form_with(model: @moussaillon) do |form| %>
+
+  <% if @moussaillon.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@moussaillon.errors.count, "error") %> prohibited
+        this moussaillon from being saved:
+      </h2>
+      <ul>
+        <% @moussaillon.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= form.label :age %><br>
+    <%= form.text_area :age %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
