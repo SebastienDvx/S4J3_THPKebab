@@ -37,6 +37,12 @@ class CorsairsController < ApplicationController
     @moussaillons = Corsair.all
   end
 
+  def destroy
+    @corsair = Corsair.find(params[:id])
+    @corsair.destroy
+    redirect_to corsairs_path
+  end
+
   # private
 
   def corsair_params

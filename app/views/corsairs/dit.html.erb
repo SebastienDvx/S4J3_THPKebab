@@ -3,7 +3,7 @@
 <br /><br />
 
 <p>
- <%= form_tag corsair_path(Corsair.find(params[:id])), method: :put do %>  
+ <%= form_tag corsair_path(@moussaillon), method: :put do %>
  <h3>Name</h><br />
   <!-- <%= label_tag 'first_name', 'Nom' %> -->
   <%= text_field_tag 'first_name' %>
